@@ -1,14 +1,8 @@
 <h1><strong>New game</strong></h1>
-<ul>
-  <li><%= @letters[0] %></li>
-  <li><%= @letters[1] %></li>
-  <li><%= @letters[2] %></li>
-  <li><%= @letters[3] %></li>
-  <li><%= @letters[4] %></li>
-  <li><%= @letters[5] %></li>
-  <li><%= @letters[6] %></li>
-  <li><%= @letters[7] %></li>
-  <li><%= @letters[8] %></li>
-  <li><%= @letters[9] %></li>
-  <li><%= @letters[-1] %></li>
-</ul>
+<h2 class="letters_color"><%= @letters %></h2>
+<p>What is the longest word you can find?</p>
+<form action="/score" method="post" data-turbo="false">
+  <input type="text" name="user_play">
+  <input  type="submit" value="Play">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+</form>

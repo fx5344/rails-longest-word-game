@@ -1,10 +1,16 @@
 class GamesController < ApplicationController
   def new
-    if params[:letter]
-      @letters = @letters.random.select(10)
-    end
+    @letters = ('A'..'Z').to_a.sample(10).join(' ')
   end
 
   def score
+    @user_play = params[:user_play]
+
+      
+
+    # @user_play.all? do ||
+
+
+    # end
   end
 end
